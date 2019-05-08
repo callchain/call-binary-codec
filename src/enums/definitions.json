@@ -38,9 +38,12 @@
     "PayChannel": 120,
     "DepositPreauth": 112,
     "Check": 67,
-    "Nickname": 110,
+    "NickName": 110,
     "Contract": 99,
-    "GeneratorMap": 103
+    "GeneratorMap": 103,
+    "IssueRoot": 105,
+    "FeeRoot": 70,
+    "InvoiceRoot": 118
   },
   "FIELDS": [
     [
@@ -444,6 +447,26 @@
       }
     ],
     [
+      "SignerListID",
+      {
+        "nth": 38,
+        "isVLEncoded": false,
+        "isSerialized": true,
+        "isSigningField": true,
+        "type": "UInt32"
+      }
+    ],
+    [
+      "SettleDelay",
+      {
+        "nth": 39,
+        "isVLEncoded": false,
+        "isSerialized": true,
+        "isSigningField": true,
+        "type": "UInt32"
+      }
+    ],
+    [
       "IndexNext",
       {
         "nth": 1,
@@ -517,6 +540,26 @@
       "HighNode",
       {
         "nth": 8,
+        "isVLEncoded": false,
+        "isSerialized": true,
+        "isSigningField": true,
+        "type": "UInt64"
+      }
+    ],
+    [
+      "DestinationNode",
+      {
+        "nth": 9,
+        "isVLEncoded": false,
+        "isSerialized": true,
+        "isSigningField": true,
+        "type": "UInt64"
+      }
+    ],
+    [
+      "Fans",
+      {
+        "nth": 10,
         "isVLEncoded": false,
         "isSerialized": true,
         "isSigningField": true,
@@ -804,6 +847,36 @@
       }
     ],
     [
+      "Total",
+      {
+        "nth": 11,
+        "isVLEncoded": false,
+        "isSerialized": true,
+        "isSigningField": true,
+        "type": "Amount"
+      }
+    ],
+    [
+      "Issued",
+      {
+        "nth": 12,
+        "isVLEncoded": false,
+        "isSerialized": true,
+        "isSigningField": true,
+        "type": "Amount"
+      }
+    ],
+    [
+      "Freezed",
+      {
+        "nth": 12,
+        "isVLEncoded": false,
+        "isSerialized": true,
+        "isSigningField": true,
+        "type": "Amount"
+      }
+    ],
+    [
       "MinimumOffer",
       {
         "nth": 16,
@@ -1020,6 +1093,26 @@
         "isVLEncoded": true,
         "isSerialized": true,
         "isSigningField": false,
+        "type": "Blob"
+      }
+    ],
+    [
+      "NickName",
+      {
+        "nth": 19,
+        "isVLEncoded": true,
+        "isSerialized": true,
+        "isSigningField": true,
+        "type": "Blob"
+      }
+    ],
+    [
+      "Invoice",
+      {
+        "nth": 20,
+        "isVLEncoded": true,
+        "isSerialized": true,
+        "isSigningField": true,
         "type": "Blob"
       }
     ],
@@ -1653,9 +1746,8 @@
     "PaymentChannelCreate": 13,
     "PaymentChannelFund": 14,
     "PaymentChannelClaim": 15,
-    "CheckCreate": 16,
-    "CheckCash": 17,
-    "CheckCancel": 18,
+    "IssueSet": 16,
+   
     "DepositPreauth": 19,
     "TrustSet": 20,
     "EnableAmendment": 100,
