@@ -33,7 +33,7 @@ describe('Amount', function() {
     const amt = Amount.from(fixture);
     const rewritten = {
       'value': '1',
-      'issuer': 'rrrrrrrrrrrrrrrrrrrrrhoLvTp',
+      'issuer': 'ccccccccccccccccccccchoLvTp',
       'currency': 'USD'
     };
     assert.deepEqual(amt.toJSON(), rewritten);

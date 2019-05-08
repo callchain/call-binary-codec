@@ -18,7 +18,7 @@
     "decimal.js": "^5.0.8",
     "inherits": "^2.0.1",
     "lodash": "^4.12.0",
-    "call-address-codec": "^2.0.1"
+    "call-address-codec": "^0.1.0"
   },
   "devDependencies": {
     "assert-diff": "^1.0.1",
